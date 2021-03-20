@@ -9,3 +9,6 @@ updates:
     directory: "/" # Location of package manifests
     schedule:
       interval: "daily"
+    # Update the npm manifest file to relax
+    # the version requirements
+    versioning-strategy: widen
