@@ -1,16 +1,40 @@
-# Project Cloned
-Cloned from:
+# 2021 BPJ2 - ITW20-MA-BB
+
+
+
+### Git Commit Messages
+
+Begin the message with
+* Add
+* Fix
+* Change
+
+### Building
+
+Setup dependencies via yarn
+
+```
+yarn install
+```
+
+### Developing
+
+```
+yarn run dev
+```
+
+### Example from
 
 https://github.com/bpmn-io/bpmn-js-examples/tree/master/commenting
 
-# A simple discussion app
+### A simple discussion app
 
 [bpmn-js](https://github.com/bpmn-io/bpmn-js) is the BPMN 2.0 diagram modeling and rendering toolkit that powers [bpmn.io](http://bpmn.io).
 
 This example showcases how to build a simple discussion app based on [bpmn-js](https://github.com/bpmn-io/bpmn-js) and the [bpmn-js-embedded-comments](https://github.com/bpmn-io/bpmn-js-embedded-comments) extension.
 
 
-## About
+#### About
 
 This example uses bpmn-js to embed the [pizza collaboration](http://demo.bpmn.io/s/pizza-collaboration) diagram into a web application and add the ability to put comments on individual tasks.
 
@@ -19,7 +43,7 @@ This example uses bpmn-js to embed the [pizza collaboration](http://demo.bpmn.io
 The comments are added to an elements `<bpmn:documentation>` tag and may be downloaded along with the element.
 
 
-## Building
+### Building
 
 One time installation of all dependencies via [npm](https://npmjs.org):
 
