@@ -11,6 +11,7 @@ module.exports = function(grunt) {
             extensions: [ '.bpmn' ]
           } ],
           [ 'babelify', {
+            presets: ['es2015'],
             global: true
           } ]
         ]
