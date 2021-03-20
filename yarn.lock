@@ -1695,21 +1695,6 @@ diagram-js-direct-editing@^1.6.2:
     min-dash "^3.5.2"
     min-dom "^3.1.3"
 
-diagram-js@^5.0.0:
-  version "5.1.1"
-  resolved "https://registry.yarnpkg.com/diagram-js/-/diagram-js-5.1.1.tgz"
-  integrity sha512-SLxHOfEDLBC7LBjQFmXyvQXt4P5yZYFnTvhsCZZtJyQCadrVs71cUlchMmH+kUS/zaga/BkPWFbnV1d+4MsF8A==
-  dependencies:
-    css.escape "^1.5.1"
-    didi "^4.0.0"
-    hammerjs "^2.0.1"
-    inherits "^2.0.1"
-    min-dash "^3.5.0"
-    min-dom "^3.0.0"
-    object-refs "^0.3.0"
-    path-intersection "^1.0.2"
-    tiny-svg "^2.2.1"
-
 diagram-js@^7.2.3:
   version "7.2.3"
   resolved "https://registry.yarnpkg.com/diagram-js/-/diagram-js-7.2.3.tgz"
@@ -1724,11 +1709,6 @@ diagram-js@^7.2.3:
     object-refs "^0.3.0"
     path-intersection "^2.2.1"
     tiny-svg "^2.2.2"
-
-didi@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/didi/-/didi-4.0.0.tgz"
-  integrity sha512-AzMElh8mCHOPWPCWfGjoJRla31fMXUT6+287W5ef3IPmtuBcyG9+MkFS7uPP6v3t2Cl086KwWfRB9mESa0OsHQ==
 
 didi@^5.2.1:
   version "5.2.1"
@@ -3241,12 +3221,12 @@ mime@1.6.0:
   resolved "https://registry.yarnpkg.com/mime/-/mime-1.6.0.tgz"
   integrity sha512-x0Vn8spI+wuJ1O6S7gnbaQg8Pxh4NNHb7KSINmEWKiPE4RKOplvijn+NkmYmmRgP68mc70j2EbeTFRsrswaQeg==
 
-min-dash@^3.0.0, min-dash@^3.5.0, min-dash@^3.5.2:
+min-dash@^3.0.0, min-dash@^3.5.2:
   version "3.7.0"
   resolved "https://registry.yarnpkg.com/min-dash/-/min-dash-3.7.0.tgz"
   integrity sha512-IlEbbItQU7tipoa4aAWocSuhR76jKqQG/N2+/Mh7d+BLZ3UmQl57ppKhziPY/TXBGps9+M8BC1c7AzqcYLp5BA==
 
-min-dom@^3.0.0, min-dom@^3.1.3:
+min-dom@^3.1.3:
   version "3.1.3"
   resolved "https://registry.yarnpkg.com/min-dom/-/min-dom-3.1.3.tgz"
   integrity sha512-Lbi1NZjLV9Hg6/bEe2Lfk2Fzsv1MwheR61whqTLP+FxLndYo9TxpksEgM5Kr1khjfCtFTMr0waeEfwIpStkRdw==
@@ -3717,11 +3697,6 @@ path-exists@^2.0.0:
   integrity sha1-D+tsZPD8UY2adU3V77YscCJ2H0s=
   dependencies:
     pinkie-promise "^2.0.0"
-
-path-intersection@^1.0.2:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/path-intersection/-/path-intersection-1.1.1.tgz"
-  integrity sha512-EdeUuXCm0+tb/2gv8PmRhd9fYYOtbDeTYkwCnzkBuAEjevEZi2mWUi1DVFF5nqSObYsxKcchvKUhnRULWOFreQ==
 
 path-intersection@^2.2.1:
   version "2.2.1"
@@ -4660,7 +4635,7 @@ tiny-lr@^1.1.1:
     object-assign "^4.1.0"
     qs "^6.4.0"
 
-tiny-svg@^2.2.1, tiny-svg@^2.2.2:
+tiny-svg@^2.2.2:
   version "2.2.2"
   resolved "https://registry.yarnpkg.com/tiny-svg/-/tiny-svg-2.2.2.tgz"
   integrity sha512-u6zCuMkDR/3VAh83X7hDRn/pi0XhwG2ycuNS0cTFtQjGdOG2tSvEb8ds65VeGWc3H6PUjJKeunueXqgkZqtMsg==
