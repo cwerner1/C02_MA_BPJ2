@@ -76,3 +76,9 @@ body, html {
 
 .icon-comment:before { content: '\e800'; }
 .icon-delete:before { content: '\e802'; }
+
+
+
+.userType.active {
+  background-color: lightblue;
+}

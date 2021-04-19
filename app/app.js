@@ -15,6 +15,38 @@ var viewer = new BpmnViewer({
 });
 
 
+/**
+ * basic Login
+ *
+ * Get Username and Type from config.json
+ * creates buttons for each UserType
+ *
+ * On Click of the Button the user will be set in window.config.user
+ */
+
+window.config = {user: {}};
+$.getJSON("config.json").done(data => {
+
+  config = data;
+  let $login = $("#login");
+  let $button
+  config.users.forEach(user => {
+    $button = $("<button>")
+        .on("click", function (e) {
+          $('button.userType').removeClass("active");
+          $(this).addClass("active");
+          config.user = user
+        });
+    $button.addClass("userType")
+    $button.text(user.name);
+    $login.append($button);
+  });
+  $button.trigger("click");
+  console.log(config.user);
+});
+
+
+
 async function openDiagram(diagram) {
 
   try {
@@ -93,6 +125,7 @@ $file.on('change', function() {
 
 // we use stringify to inline a simple BPMN diagram
 import pizzaDiagram from '../resources/pizza-collaboration-annotated.bpmn';
+import foreach from "foreach";
 
 openDiagram(pizzaDiagram);
 

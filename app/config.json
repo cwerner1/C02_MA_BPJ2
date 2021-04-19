@@ -1,0 +1,12 @@
+{
+  "users": [
+    {
+      "name": "Customer",
+      "type": "customer"
+    },
+    {
+      "name": "Stakeholder",
+      "type": "stakeholder"
+  }
+  ]
+}
