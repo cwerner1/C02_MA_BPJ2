@@ -19,11 +19,11 @@
     }
 
     #canvas {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
+    }
+
+    .bpmn-modeller {
+      height: 100%;
+      display: flex;
     }
 
     #canvas > div {
@@ -31,10 +31,7 @@
     }
 
     .header {
-      position: fixed;
-      left: 10px;
-      top: 10px;
-
+      width: 30%;
       border: solid 1px #999;
       background: #EEE;
       border-radius: 5px;
@@ -76,8 +73,10 @@
     <h1>BPMN 2.0 comments</h1><div id="login"></div>
   </div>
 
-  <div id="canvas"></div>
-
+  <div class="content with-diagram">
+    <div class="canvas" id="canvas"></div>
+    <div class="properties-panel-parent" id="js-properties-panel"></div>
+  </div>
   <div class="toolbar">
 
     <div class="entry">

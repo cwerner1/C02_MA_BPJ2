@@ -6,14 +6,21 @@ import $ from 'jquery';
 import BpmnViewer from 'bpmn-js/lib/NavigatedViewer';
 
 import EmbeddedComments from 'bpmn-js-embedded-comments';
+import * as propertiesPanelModule  from 'bpmn-js-properties-panel';
+import * as propertiesProviderModule from 'bpmn-js-properties-panel/lib/provider/bpmn';
+import BpmnJS from 'bpmn-js/lib/Modeler';
 
-var viewer = new BpmnViewer({
+const viewer = new BpmnJS({
   container: '#canvas',
   additionalModules: [
-    EmbeddedComments
-  ]
+    EmbeddedComments,
+    propertiesPanelModule,
+    propertiesProviderModule
+  ],
+  propertiesPanel: {
+    parent: '#js-properties-panel'
+  }
 });
-
 
 /**
  * basic Login
@@ -67,7 +74,7 @@ async function openDiagram(diagram) {
 var $download = $('[data-download]');
 
 async function serialize() {
-
+  console.log(viewer);
   try {
     const { xml } = await viewer.saveXML();
 
