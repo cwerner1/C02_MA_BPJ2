@@ -5,7 +5,7 @@ import $ from 'jquery';
 // dependencies via npm install --save-dev bpmn-js
 import BpmnViewer from 'bpmn-js/lib/NavigatedViewer';
 
-import EmbeddedComments from 'bpmn-js-embedded-comments';
+import EmbeddedComments from './Comments'
 import * as propertiesPanelModule  from 'bpmn-js-properties-panel';
 import * as propertiesProviderModule from 'bpmn-js-properties-panel/lib/provider/bpmn';
 import BpmnJS from 'bpmn-js/lib/Modeler';
@@ -105,6 +105,10 @@ viewer.on('commandStack.changed', serialize);
 viewer.on('canvas.click', function(event) {
 console.log(event);
   viewer.get('comments').collapseAll();
+});
+
+viewer.on('comments.beforeAdd', function (event) {
+  console.log('comments.beforeAdd', event);
 });
 
 
