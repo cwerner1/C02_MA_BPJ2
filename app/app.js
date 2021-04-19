@@ -89,10 +89,21 @@ async function serialize() {
   }
 }
 
+
+viewer.get('eventBus').on('element.click', (event) => {
+  console.log(event);
+} );
+
+
+viewer.get('eventBus').on('shape.changed', (event) => {
+  console.log(event);
+} );
+
 viewer.on('comments.updated', serialize);
 viewer.on('commandStack.changed', serialize);
 
-viewer.on('canvas.click', function() {
+viewer.on('canvas.click', function(event) {
+console.log(event);
   viewer.get('comments').collapseAll();
 });
 

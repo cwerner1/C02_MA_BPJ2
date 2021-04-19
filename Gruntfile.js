@@ -52,6 +52,12 @@ module.exports = function(grunt) {
           dest: 'dist/diagram-js.css'
         } ]
       },
+      properties_panel: {
+        files: [ {
+          src: require.resolve('bpmn-js-properties-panel/dist/assets/bpmn-js-properties-panel.css'),
+          dest: 'dist/bpmn-js-properties-panel.css'
+        } ]
+      },
       app: {
         files: [
           {
