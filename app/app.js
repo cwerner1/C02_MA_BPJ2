@@ -108,8 +108,15 @@ console.log(event);
 });
 
 viewer.on('comments.beforeAdd', function (event) {
-  console.log('comments.beforeAdd', event);
+  event.comment = event.comment + " - modified by beforeAdd";
+  event.author = event.author + " - modified by beforeAdd"
+
+  event = restcall(event);
+  return event;
 });
+
+
+
 
 
 // file open handling
@@ -201,3 +208,20 @@ function openFile(file, callback) {
   container.get(0).addEventListener('drop', handleFileSelect, false);
 
 })($('body'), openDiagram);
+
+function syncDelay(milliseconds){
+  var start = new Date().getTime();
+  var end=0;
+  while( (end-start) < milliseconds){
+    end = new Date().getTime();
+  }
+}
+
+
+function restcall(event) {
+  console.error("Call the Rest Interface - waiting for 500ms");
+  syncDelay(500);
+  console.log("After the delay")
+
+  return event;
+}
