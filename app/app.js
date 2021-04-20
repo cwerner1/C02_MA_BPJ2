@@ -1,10 +1,9 @@
 import $ from 'jquery';
 
+import commentPropertiesProvider from './provider';
 
 // require the viewer, make sure you added it to your project
 // dependencies via npm install --save-dev bpmn-js
-import BpmnViewer from 'bpmn-js/lib/NavigatedViewer';
-
 import EmbeddedComments from './Comments'
 import * as propertiesPanelModule  from 'bpmn-js-properties-panel';
 import * as propertiesProviderModule from 'bpmn-js-properties-panel/lib/provider/bpmn';
@@ -15,7 +14,8 @@ const viewer = new BpmnJS({
   additionalModules: [
     EmbeddedComments,
     propertiesPanelModule,
-    propertiesProviderModule
+    propertiesProviderModule,
+    commentPropertiesProvider
   ],
   propertiesPanel: {
     parent: '#js-properties-panel'
@@ -108,9 +108,6 @@ console.log(event);
 });
 
 viewer.on('comments.beforeAdd', function (event) {
-  event.comment = event.comment + " - modified by beforeAdd";
-  event.author = event.author + " - modified by beforeAdd"
-
   event = restcall(event);
   return event;
 });
