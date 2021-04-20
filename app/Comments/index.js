@@ -101,6 +101,7 @@ function Comments(eventBus, overlays, bpmnjs) {
             var comments = getComments(element);
             comments.forEach(function (val) {
                 var $comment = $(Comments.COMMENT_HTML);
+                $comment.find('[data-author]').text(val[0]);
                 $comment.find('[data-text]').text(val[1]);
                 $comment.find('[data-delete]').click(function (e) {
                     e.preventDefault();
@@ -186,7 +187,7 @@ function Comments(eventBus, overlays, bpmnjs) {
 }
 Comments.$inject = ['eventBus', 'overlays', 'bpmnjs'];
 Comments.OVERLAY_HTML = '<div class="comments-overlay">' + '<div class="toggle">' + '<span class="icon-comment"></span>' + '<span class="comment-count" data-comment-count></span>' + '</div>' + '<div class="content">' + '<div class="comments"></div>' + '<div class="edit">' + '<textarea tabindex="1" placeholder="Add a comment"></textarea>' + '</div>' + '</div>' + '</div>';
-Comments.COMMENT_HTML = '<div class="comment">' + '<div data-text></div><a href class="delete icon-delete" data-delete></a>' + '</div>'; // helpers ///////////////
+Comments.COMMENT_HTML = '<div class="comment">' + '<div data-author></div><div data-text></div><a href class="delete icon-delete" data-delete></a>' + '</div>'; // helpers ///////////////
 
 function defer(fn) {
     setTimeout(fn, 0);
