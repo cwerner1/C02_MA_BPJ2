@@ -49,6 +49,7 @@
   },
   "dependencies": {
     "bpmn-js": "^8.2.2",
+    "bpmn-js-embedded-comments": "^0.6.1",
     "bpmn-js-properties-panel": "^0.42.0",
     "diagram-js": "^7.2.3",
     "jquery": "^3.3.1",
