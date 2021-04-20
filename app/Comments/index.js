@@ -124,12 +124,20 @@ function Comments(eventBus, overlays, bpmnjs) {
                 var comment = $textarea.val();
 
                 if (comment) {
-                    let author= window.config.user.type;
-                    eventBus.fire('comments.beforeAdd', {
+                    let author = window.config.user.type;
+                    let result = eventBus.fire('comments.beforeAdd', {
                         element: element,
                         comments: getComments(element),
-                        comment: comment
+                        comment: comment,
+                        author: author
                     });
+
+                    if (result !== undefined && result !== null && result !== {}) {
+                        element = result.element;
+                        author = result.author;
+                        comment = result.comment;
+                    }
+
                     addComment(element, author, comment);
                     $textarea.val('');
                     eventBus.fire('comments.afterAdd', {

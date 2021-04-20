@@ -52,6 +52,18 @@ module.exports = function(grunt) {
           dest: 'dist/diagram-js.css'
         } ]
       },
+      bpmn_font: {
+        files: [ {
+          src: require.resolve('bpmn-js/dist/assets/bpmn-font/css/bpmn.css'),
+          dest: 'dist/bpmn.css'
+        } ,{
+          src: require.resolve('bpmn-js/dist/assets/bpmn-font/css/bpmn-codes.css'),
+          dest: 'dist/bpmn-codes.css'
+        } ,{
+          src: require.resolve('bpmn-js/dist/assets/bpmn-font/css/bpmn-embedded.css'),
+          dest: 'dist/bpmn-embedded.css'
+        } ]
+      },
       properties_panel: {
         files: [ {
           src: require.resolve('bpmn-js-properties-panel/dist/assets/bpmn-js-properties-panel.css'),
