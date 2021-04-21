@@ -2004,6 +2004,13 @@ body@^5.1.0:
     raw-body "~1.1.0"
     safe-json-parse "~1.0.1"
 
+bpmn-js-embedded-comments@^0.6.1:
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/bpmn-js-embedded-comments/-/bpmn-js-embedded-comments-0.6.1.tgz#d75cd76e6d2402843e3cafa2a5bbd6873c91a0c5"
+  integrity sha512-8OQI6Z+8ntdchyzulTg5nMNu2FLeqwzDZKOMaTdXuX4VzIq8H6w/xhOxRoT2eFNxCNe8csuSn3xCPT80+JGhVg==
+  dependencies:
+    jquery "^3.4.1"
+
 bpmn-js-properties-panel@^0.42.0:
   version "0.42.0"
   resolved "https://registry.yarnpkg.com/bpmn-js-properties-panel/-/bpmn-js-properties-panel-0.42.0.tgz#0f63bd85079a4537318976462cbe25a8b84c3327"
@@ -4442,7 +4449,7 @@ jest-worker@^26.6.2:
     merge-stream "^2.0.0"
     supports-color "^7.0.0"
 
-jquery@^3.3.1:
+jquery@^3.3.1, jquery@^3.4.1:
   version "3.6.0"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.6.0.tgz#c72a09f15c1bdce142f49dbf1170bdf8adac2470"
   integrity sha512-JVzAR/AjBvVt2BmYhxRCSYysDsPcssdmTFnzyLEts9qNwmjmu4JTAMYubEfwVOSwpQ1I1sKKFcxhZCI2buerfw==
@@ -6953,9 +6960,9 @@ webpack-sources@^2.1.1:
     source-map "^0.6.1"
 
 webpack@^5.27.0:
-  version "5.34.0"
-  resolved "https://registry.yarnpkg.com/webpack/-/webpack-5.34.0.tgz#8f12bfd3474e7543232345b89294cfe8a5191c10"
-  integrity sha512-+WiFMgaZqhu7zKN64LQ7z0Ml4WWI+9RwG6zmS0wJDQXiCeg3hpN8fYFNJ+6WlosDT55yVxTfK7XHUAOVR4rLyA==
+  version "5.35.0"
+  resolved "https://registry.yarnpkg.com/webpack/-/webpack-5.35.0.tgz#4db23c2b96c4e53a90c5732d7cdb301a84a33576"
+  integrity sha512-au3gu55yYF/h6NXFr0KZPZAYxS6Nlc595BzYPke8n0CSff5WXcoixtjh5LC/8mXunkRKxhymhXmBY0+kEbR6jg==
   dependencies:
     "@types/eslint-scope" "^3.7.0"
     "@types/estree" "^0.0.47"
