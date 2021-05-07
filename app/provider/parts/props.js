@@ -31,13 +31,6 @@ export default function(group, element, translate, bus) {
 
 }
 
-let getHtml = function(options) {
-    return {
-        id: options.id,
-        html: '<button>HI</button>'
-    };
-}
-
 let getTable = function(options) {
     let html = '<table>';
     options.table.headers.forEach(header => {

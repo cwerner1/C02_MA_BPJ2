@@ -2,11 +2,18 @@
   "users": [
     {
       "name": "Customer",
-      "type": "customer"
+      "type": "customer",
+      "password": "1234"
+    },
+    {
+      "name": "TestUser",
+      "type": "customer",
+      "password": "1234"
     },
     {
       "name": "Stakeholder",
-      "type": "stakeholder"
+      "type": "stakeholder",
+      "password": "1234"
   }
   ]
 }

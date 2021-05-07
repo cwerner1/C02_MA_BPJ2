@@ -31,12 +31,34 @@ const viewer = new BpmnJS({
  * On Click of the Button the user will be set in window.config.user
  */
 
+let availableUsers = [];
+
 window.config = {user: {}};
 $.getJSON("config.json").done(data => {
 
   config = data;
   let $login = $("#login");
   let $button
+
+  availableUsers = data.users;
+  console.log(availableUsers);
+
+  document.getElementById('loginModal').style.display = 'block';
+
+  $('#loginButton').on('click', function(e) {
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+    for (let user of availableUsers) {
+      if (user.name === username && user.password === password) {
+        config.user = user;
+        $("#login").innerHTML = `<span>User: ${config.user.name} + Role: ${config.user.type}</span>`;
+        document.getElementById('loginModal').style.display = 'none';
+        break;
+      }
+    }
+  });
+
+
   config.users.forEach(user => {
     $button = $("<button>")
         .on("click", function (e) {
@@ -46,13 +68,14 @@ $.getJSON("config.json").done(data => {
         });
     $button.addClass("userType")
     $button.text(user.name);
-    $login.append($button);
   });
-  $button.trigger("click");
+
   console.log(config.user);
 });
 
-
+function onLogin() {
+  console.log('H');
+}
 
 async function openDiagram(diagram) {
 
