@@ -97,7 +97,7 @@ async function openDiagram(diagram) {
 var $download = $('[data-download]');
 
 async function serialize() {
-  console.log(viewer);
+ // console.log(viewer);
   try {
     const { xml } = await viewer.saveXML();
 
@@ -119,22 +119,31 @@ viewer.get('eventBus').on('element.click', (event) => {
 
 
 viewer.get('eventBus').on('shape.changed', (event) => {
-  console.log(event);
+  //console.log(event);
 } );
 
 viewer.on('comments.updated', serialize);
 viewer.on('commandStack.changed', serialize);
 
 viewer.on('canvas.click', function(event) {
-console.log(event);
+  //console.log(event);
   viewer.get('comments').collapseAll();
 });
 
-viewer.on('comments.beforeAdd', function (event) {
-  event = restcall(event);
-  return event;
+
+viewer.on('comments.afterAdd', function (event) {
+  defer(function () {
+    event = restcall(event);
+
+//  # Try To update the viewer
+
+  });
+
 });
 
+function defer(fn) {
+  setTimeout(fn, 0);
+}
 
 
 
@@ -239,9 +248,27 @@ function syncDelay(milliseconds){
 
 
 function restcall(event) {
-  console.error("Call the Rest Interface - waiting for 500ms");
-  syncDelay(500);
-  console.log("After the delay")
 
-  return event;
+
+  $.ajax({
+    url: 'https://sentimentanalysisweb.azurewebsites.net/api/predict',
+    data: {
+      text: event.comment
+    },
+    dataType: "json",
+    type: 'POST',
+    success: function (result) {
+      // Do something with the result
+      console.log(result)
+      event.comment = event.comment + " 0.44";
+      // Auch das letzte Element im Array Comment updaten
+      event.comments[event.comments.length - 1][1] = event.comment
+
+      viewer.get('comments').updateElement(event);
+    }
+  });
+
+
 }
+
+

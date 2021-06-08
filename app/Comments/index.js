@@ -167,7 +167,6 @@ function Comments(eventBus, overlays, bpmnjs) {
         if (element.labelTarget || !element.businessObject.$instanceOf('bpmn:FlowNode')) {
             return;
         }
-
         defer(function () {
             createCommentBox(element);
         });
@@ -183,6 +182,42 @@ function Comments(eventBus, overlays, bpmnjs) {
                 toggleCollapse(c.element);
             }
         });
+    };
+    /**
+     *
+     * @param event
+     */
+    this.updateElement = function (ev) {
+        setComments(ev.element, ev.comments);
+
+        // get Current Toogle Status:
+        let openend = false;
+
+        var o = overlays.get({
+            element: ev.element.id,
+            type: 'comments'
+        })[0];
+        let $overlay = o && o.html;
+        if ($overlay) {
+            openend = $overlay.is('.expanded');
+        }
+        overlays.remove({element: ev.element.id});
+
+        defer(function () {
+            createCommentBox(ev.element);
+            if (openend) {
+
+                var o = overlays.get({
+                    element: ev.element.id,
+                    type: 'comments'
+                })[0];
+                let $overlay = o && o.html;
+
+                if ($overlay) {
+                    $overlay.addClass('expanded')
+                }
+            }
+        })
     };
 }
 Comments.$inject = ['eventBus', 'overlays', 'bpmnjs'];

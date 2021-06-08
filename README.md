@@ -1,6 +1,7 @@
 # 2021 BPJ2 - ITW20-MA-BB
 
-
+## Usersettings: 
+User Credentials: /app/config.json
 
 ### Git Commit Messages
 
