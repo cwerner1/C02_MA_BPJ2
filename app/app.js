@@ -252,10 +252,11 @@ function restcall(event) {
 
   $.ajax({
     url: 'https://sentimentanalysisweb.azurewebsites.net/api/predict',
-    data: {
-      text: event.comment
-    },
+    data:  JSON.stringify({
+      "text": event.comment
+    }),
     dataType: "json",
+    contentType: 'application/json',
     type: 'POST',
     success: function (result) {
       // Do something with the result
