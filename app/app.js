@@ -260,7 +260,7 @@ function restcall(event) {
     success: function (result) {
       // Do something with the result
       console.log(result)
-      event.comment = event.comment + " 0.44";
+      event.comment = event.comment + " " + result;
       // Auch das letzte Element im Array Comment updaten
       event.comments[event.comments.length - 1][1] = event.comment
 
