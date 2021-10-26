@@ -2026,14 +2026,14 @@ bpmn-js-properties-panel@^0.42.0:
     semver "^6.3.0"
 
 bpmn-js@^8.2.2:
-  version "8.3.1"
-  resolved "https://registry.yarnpkg.com/bpmn-js/-/bpmn-js-8.3.1.tgz#1221d7c356d9518b61c0b141fd94724b21bf3f83"
-  integrity sha512-k7dHJ8TW6Zx5iOV/c07k+kDtxzHvDT6J2bGKp+sM46DSKrHyP0PeEH+Ta/vkYdWwirxVWYb2e68glc+ToauHIw==
+  version "8.8.2"
+  resolved "https://registry.yarnpkg.com/bpmn-js/-/bpmn-js-8.8.2.tgz#221666650ddc839bea2031d418d90bdf6e0ded2a"
+  integrity sha512-PnnbYxnQ2btaUzayI+vM9JOdCal46rjSOctjg0Op4psUr7/AIzTnN2/d7BvbeetLZ1GaZ2Z5DmWxIOcsabQZdQ==
   dependencies:
-    bpmn-moddle "^7.0.5"
+    bpmn-moddle "^7.1.2"
     css.escape "^1.5.1"
-    diagram-js "^7.2.3"
-    diagram-js-direct-editing "^1.6.2"
+    diagram-js "^7.5.0"
+    diagram-js-direct-editing "^1.6.3"
     ids "^1.0.0"
     inherits "^2.0.4"
     min-dash "^3.5.2"
@@ -2041,10 +2041,10 @@ bpmn-js@^8.2.2:
     object-refs "^0.3.0"
     tiny-svg "^2.2.2"
 
-bpmn-moddle@^7.0.5:
-  version "7.0.5"
-  resolved "https://registry.yarnpkg.com/bpmn-moddle/-/bpmn-moddle-7.0.5.tgz#4b2c28672b2b3c5669dc541bf2d5d744ed4b4d30"
-  integrity sha512-3OaoEJCHQdZeRBTmBtDJebXamweW03cgA5ymOZitddMY28Vo1dOwAX/Yg2X375d2QCeC5w/j5gI8V8iVRn12fg==
+bpmn-moddle@^7.1.2:
+  version "7.1.2"
+  resolved "https://registry.yarnpkg.com/bpmn-moddle/-/bpmn-moddle-7.1.2.tgz#0a23046f67e43c5e37b9c9f6800de070f3e81df4"
+  integrity sha512-Sax4LokRCTqlg26njjULN3ZGtCmwH5gZVUZTRF0jwJk+YpMQhSfSoUECxjNv8OROoLxu8Z+MjdOHIxgvJf7KwA==
   dependencies:
     min-dash "^3.5.2"
     moddle "^5.0.2"
@@ -2883,18 +2883,18 @@ detective@^5.2.0:
     defined "^1.0.0"
     minimist "^1.1.1"
 
-diagram-js-direct-editing@^1.6.2:
-  version "1.6.2"
-  resolved "https://registry.yarnpkg.com/diagram-js-direct-editing/-/diagram-js-direct-editing-1.6.2.tgz#d6ed7076f24227048d7ea6b1837b9a08954fc6ad"
-  integrity sha512-hAiSnt6iETMLHBRsCU+XeATiV7u/rovlAX/l4MnvzW6+VeHqQOn+xFetD6JwxfTHKvT3h9fAQpfMZPOPlRFNlw==
+diagram-js-direct-editing@^1.6.3:
+  version "1.6.3"
+  resolved "https://registry.yarnpkg.com/diagram-js-direct-editing/-/diagram-js-direct-editing-1.6.3.tgz#e7c59d7ac395439728f8da155f93510c58740c48"
+  integrity sha512-OwDpK4cNJ4QYuV855HvtZcB9/krfZRQ80uaE6bwaKbyb4584sD7nCtR5yWOyhJx4dIh1gMoqhF7d7G57M4tQVQ==
   dependencies:
     min-dash "^3.5.2"
     min-dom "^3.1.3"
 
-diagram-js@^7.2.3:
-  version "7.2.3"
-  resolved "https://registry.yarnpkg.com/diagram-js/-/diagram-js-7.2.3.tgz#6be81bc4e3e42a99eab8b233de886ea2a14af526"
-  integrity sha512-ExQAEFYRle92n08NcBEzdyCvmyifdX2ShkbWVkWfzG2k+c7zXF+EcK/5sXmzzS2j2dLsNlZvcH0+xdk+ltzKnw==
+diagram-js@^7.2.3, diagram-js@^7.5.0:
+  version "7.6.0"
+  resolved "https://registry.yarnpkg.com/diagram-js/-/diagram-js-7.6.0.tgz#9335dbb2f8991512e67485cbc9fd98868b2287ac"
+  integrity sha512-at6PPokklB5wl1xzyaBV3OF4Q79zdv1ptleTVHm0ut0ygIUuOMu7cHnJfhImeau5mknToRLQ/Ru+TsCZuG7BvA==
   dependencies:
     css.escape "^1.5.1"
     didi "^5.2.1"
